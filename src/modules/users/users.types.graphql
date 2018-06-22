@@ -1,0 +1,17 @@
+type Query {
+  getUsers: [User]
+  user(id: Int!): User
+}
+
+type User {
+  id: Int
+  firstName: String
+  lastName: String
+  friends: [User]
+  posts: [Post]
+}
+
+type Post {
+  user: User!
+  body: String!
+}
